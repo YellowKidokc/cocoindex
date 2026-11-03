@@ -13,7 +13,7 @@ In this tutorial, we'll build a simple app that converts PDF files to Markdown a
 
 ## Overview
 
-![App example showing PDF to Markdown conversion](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/app-example.svg)
+![App example showing PDF to Markdown conversion](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/app-example-dark.svg)
 
 
 1. Read PDF files from a local directory
@@ -59,7 +59,7 @@ When your source data is updated, or your processing logic is changed (for examp
 
 Define a CocoIndex App — the top-level runnable unit in CocoIndex.
 
-![App Definition](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/app-def.svg)
+![App Definition](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/app-def-dark.svg)
 
 ```python title="main.py"
 import pathlib
@@ -73,11 +73,11 @@ from docling.datamodel.pipeline_options import PdfPipelineOptions
 from docling.document_converter import DocumentConverter, PdfFormatOption
 ```
 
-[→ CocoIndex App](/docs/programming_guide/app)
+[→ CocoIndex App](/docs/programming_guide/app/)
 
 ### Define the main function
 
-![App Definition](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/components.svg)
+![App Definition](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/components-dark.svg)
 
 In the main function, we walk through each file in the source directory and process it.
 
@@ -97,12 +97,12 @@ file level, or page level.
 
 In this example, because we want to independently convert each file to Markdown, it is the most natural to pick it at the file level.
 
-[→ Processing Component](/docs/programming_guide/processing_component)
+[→ Processing Component](/docs/programming_guide/processing_component/)
 
 
 ### Define file processing
 
-![File Process](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/file-process.svg)
+![File Process](https://cocoindex.io/blobs/docs-v1/img/examples/pdf-to-markdown/file-process-dark.svg)
 
 For a file, we use Docling to convert it to Markdown. The converter follows
 Docling's [explicit accelerator configuration](https://docling-project.github.io/docling/_generated/examples/run_with_accelerator/)
@@ -135,7 +135,7 @@ def process_file(
 
 We use `@coco.fn` with `memo=True` to create a memoized function that processes each file.
 
-[→ Function](/docs/programming_guide/function)
+[→ Function](/docs/programming_guide/function/)
 
 ### Create the App
 
